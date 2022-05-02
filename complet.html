@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>Loi de Planck</title>
+    <style>
+        body{
+    margin:0em;
+    padding:0em;
+	background-color:rgba(0,0,0,0);
+}
+#conteneur{
+	
+	font-family: Verdana, sans-serif;
+	background-color:#eee;
+	margin:0em;
+	padding:1em;
+    padding-left:0em;
+	box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
+	border-radius:2em;
+}
+canvas{
+	margin:0em;
+}
+.contenu{
+    text-align:center;
+	background-color:#ddd;
+	margin:0em 0.25em 1em 0.25em;
+	padding: 0.5em 1em;
+	border-radius:1em;
+	box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.gauche{
+	float:left;
+}
+.droite{
+	float:right;
+}
+#background{
+    background-color:#000000;
+    
+    border-radius:0.75em;
+    padding:0.5em;
+}
+
+
+
+#temperature{
+    
+    width:12em;;
+}
+
+#objet{
+    width:8em;
+    height:8em;
+    border-radius:4em;
+    
+    background-color: rgb(0,0,0);
+}
+    </style>>
+
+</head>
+<body>
+    
+    <div id="conteneur">
+        <div class="contenu gauche" id="temperature">
+            <h2>Spectre de corps noir</h2>
+            <input type="range" id="thermometre" min="0" max="1000" value="500" step="10"><br>
+            Température : <span id="temp">500</span>K
+        </div>
+        <div class="contenu droite">
+            Aspect de l'objet :
+            <div id="background">
+            <div id="objet">&nbsp;</div>
+            </div>
+            
+
+        </div>
+        <div class="contenu gauche">
+            Spectre de la lumière émise
+        <canvas id="spectre"></canvas></div>
+        <div class="contenu gauche">
+            Spectrogramme de la lumière émise
+            <canvas id="graphe"></canvas></div>
+        <div style="clear:both;"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
