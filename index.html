@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>Loi de Planck</title>
+    <link rel="stylesheet" href="style.css"></link>
+
+</head>
+<body>
+    
+    <div id="conteneur">
+        <div class="contenu gauche" id="temperature">
+            <h2>Spectre de corps noir</h2>
+            <input type="range" id="thermometre" min="0" max="1000" value="500" step="10"><br>
+            Température : <span id="temp">500</span>K
+        </div>
+        <div class="contenu droite">
+            Aspect de l'objet :
+            <div id="background">
+            <div id="objet">&nbsp;</div>
+            </div>
+            
+
+        </div>
+        <div class="contenu gauche">
+            Spectre de la lumière émise
+        <canvas id="spectre"></canvas></div>
+        <div class="contenu gauche">
+            Spectrogramme de la lumière émise
+            <canvas id="graphe"></canvas></div>
+        <div style="clear:both;"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
